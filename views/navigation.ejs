@@ -1,0 +1,17 @@
+<nav>
+
+  <ul>
+
+    <li <% if (pageID === "home") { %> class="current" <% } %> >
+      <a href="/"> home </a>
+    </li>
+
+    <% pages.forEach(function(item){ %>
+      <li <% if (pageID === item.slug) { %> class="current" <% } %> >
+        <a href="<%- item.slug %>"> <%- item.title %> </a>
+      </li>
+    <% }); %>
+
+  </ul>
+
+</nav>

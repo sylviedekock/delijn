@@ -1,0 +1,61 @@
+<% include header %>
+
+<h1> nieuw reis</h1>
+<p id="result"> </p>
+
+  <form id="comments_form" action="/comments/" method="post">
+
+    <section>
+    <div class="fieldset-wrapper">
+      <fieldset>
+
+         <p class="field field-text">
+           <input name="comment-destination" id="comment-place" type="text" placeholder="van" aria-described-by="comment-destination-help" required/>
+      <span id="comment-destination-help" role="tooltip" class="form-help">Vul hier een bestemming in. Dit kan een stad of adres zijn. </span>
+         </p>
+         <p class="field field-text">
+           <input name="comment-destination" id="comment-place" type="text" placeholder="naar" aria-described-by="comment-destination-help" required/>
+      <span id="comment-destination-help" role="tooltip" class="form-help">Vul hier een bestemming in. Dit kan een stad of adres zijn.</span>
+         </p>
+ <hr>
+         <p class="field field-text">
+           <label for="comment-date">vertrek datum</label>
+           <input name="comment-date" id="comment-date" type="number" class="datum dag" min="1" max="31"/>
+           <input name="comment-date" id="comment-date" type="number" class="datum maand" min="1" max="12"/>
+           <input name="comment-date" id="comment-date" type="number" class="datum jaar" min="2016" max="2020"/>
+         </p>
+
+         <p class="field field-text">
+           <select name="tijdspad" id="tijdspad">
+              <option value="vertrekken">vertrekken</option>
+              <option value="aankomen">aankomen</option>
+							<input name="comment-time" id="time" type='time' value='now'/>
+           </select>
+
+
+           <hr>
+         </p>
+
+
+         <p class="field field-text">
+
+         </p>
+
+         <button type="submit">plan route</button>
+
+      </fieldset>
+
+  </form>
+
+
+</body>
+
+
+
+<h1>zoek verkooppunten in uw gemeente van De Lijn</h1>
+
+<form method="post" action="/result">
+  <input type="text" name="stad" value="">
+
+  <input type="submit" value="toon resultaten">
+</form>
